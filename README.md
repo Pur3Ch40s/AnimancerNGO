@@ -2,7 +2,7 @@
 A very basic server-authoritative example combining [Animancer]([url](https://kybernetik.com.au/animancer/)) and Unity's [Netcode for GameObjects]([url](https://docs.unity3d.com/Packages/com.unity.netcode.gameobjects@2.7/manual/index.html)).
 
 There are three scripts:
-* PlayerAnimationManager : Gathers the current animation data from the animation manager once per fixed update and sends it to each client.
+* PlayerAnimationManager : Gathers the current animation data from the net animator once per fixed update and sends it to each client.
 * NetPlayerAnimator  : Runs only on the server, takes some request to play an animation and has a method to gather and pack the current animation data. Can be expanded to include additional parameters such as remaining fade duration.
 * ClientPlayerAnimator : Runs only on the client, unpacks the animation data and uses the local transition library to play the animation locally.
 
